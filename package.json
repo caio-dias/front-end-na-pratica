@@ -1,0 +1,26 @@
+{
+  "name": "front-end-na-pratica",
+  "version": "1.0.0",
+  "description": "Curso front-end na pratica.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "caio-dias",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caio-dias/"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caio-dias/"
+  },
+  "homepage": "https://github.com/caio-dias",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-stylus": "^2.6.0",
+    "pug": "^2.0.0-rc.4"
+  }
+}
