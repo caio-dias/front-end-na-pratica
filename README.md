@@ -10,7 +10,7 @@ $ npm install -g gulp-cli
 
 **2 -** Clone the project and install the dependencies:
 ```sh
-$ git clone 
+$ git clone git@github.com:caio-dias/front-end-na-pratica.git
 $ cd front-end-na-pratica
 $ npm install
 ```
