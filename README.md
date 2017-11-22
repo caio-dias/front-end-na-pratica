@@ -29,5 +29,5 @@ $ gulp server
 
 ## Tasks
 
-- `$ gulp build`: Compile, contact and minify all files.
+- `$ gulp build`: Compile, contact and minify all files/images.
 - `$ gulp server`: Watch the files to build and start a static server.

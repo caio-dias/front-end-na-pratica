@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var pug = require('gulp-pug');
 var stylus = require('gulp-stylus');
 var connect = require('gulp-connect');
+var imagemin = require('gulp-imagemin');
 
 gulp.task('pug', function() {
 	gulp.src('./src/*.pug')
@@ -22,8 +23,8 @@ gulp.task('stylus', function() {
 gulp.task('watch', function() {
 	//1 param array com arquivo a serem escutado
 	//2 param array com tarefa a ser executada
-	gulp.watch(['./src/*.pug'],['pug'])
-	gulp.watch(['./src/assets/styles/*.styl'],['stylus'])
+	gulp.watch(['./src/*.pug','./src/partials/*.pug','./src/layouts/*.pug'],['pug'])
+	gulp.watch(['./src/assets/styles/*.styl','./src/assets/styles/partials/*.styl'],['stylus'])
 })
 
 //criando servidor local
@@ -36,6 +37,13 @@ gulp.task('serve', function() {
 	})
 })
 
+//usando imagemin para otimizar imagens
+gulp.task('imagemin', function() {
+    gulp.src('src/assets/img/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('out/assets/img/'))
+})
+
 //tasks encadeadas
-gulp.task('build', ['pug','stylus'])
+gulp.task('build', ['pug','stylus','imagemin'])
 gulp.task('server', ['serve', 'watch'])

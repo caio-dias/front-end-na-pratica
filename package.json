@@ -19,6 +19,7 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-connect": "^5.0.0",
+    "gulp-imagemin": "^4.0.0",
     "gulp-pug": "^3.3.0",
     "gulp-stylus": "^2.6.0",
     "pug": "^2.0.0-rc.4"

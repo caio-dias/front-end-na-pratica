@@ -1,6 +1,19 @@
-rosa=pink
-.foo {
-	color: rosa;
-	font-size: 12px;
-	background: none;
+/*Colors*/
+main-color = #ff0066;
+secondary-color = #212121;
+bg-color = #333333;
+
+/*Box model*/
+* {
+	box-sizing: border-box;
 }
+
+.container {
+	display: flex;
+	width: 100%;
+	margin: 0 auto;	
+	max-width: 800px;
+	flex-wrap: wrap;
+}	
+
+@import 'partials/header.styl';
