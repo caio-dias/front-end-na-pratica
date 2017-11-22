@@ -1,4 +1,9 @@
 extends ./layouts/default.pug
 
 block content
-	div Main kkkw
+	main.main.container-center
+		div.profile-container
+			//- adiciona imagem com suporte para tela de retina
+			img(srcset="assets/img/caio-perfil-1x.jpg 1x, assets/img/caio-perfil-2x.jpg 2x" src="assets/img/caio-perfil-1x.jpg" class="profile-img" alt="Caio Dias")
+			h1.heading-lv1 Caio Dias
+			p.description  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti incidunt amet modi unde voluptates quisquam aliquam sit labore possimus!

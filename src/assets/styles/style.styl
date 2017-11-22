@@ -8,6 +8,23 @@ bg-color = #333333;
 	box-sizing: border-box;
 }
 
+body {
+	display: flex;
+	flex-direction: column;
+	background-color: bg-color;
+	font-weight: 300;
+}
+
+.main {
+	flex: 1;
+}
+
+.container-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .container {
 	display: flex;
 	width: 100%;
@@ -17,3 +34,5 @@ bg-color = #333333;
 }	
 
 @import 'partials/header.styl';
+@import 'partials/footer.styl';
+@import 'partials/index.styl';
