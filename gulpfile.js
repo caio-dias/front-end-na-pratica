@@ -24,7 +24,7 @@ gulp.task('watch', function() {
 	//1 param array com arquivo a serem escutado
 	//2 param array com tarefa a ser executada
 	gulp.watch(['./src/*.pug','./src/partials/*.pug','./src/layouts/*.pug'],['pug'])
-	gulp.watch(['./src/assets/styles/*.styl','./src/assets/styles/partials/*.styl'],['stylus'])
+	gulp.watch(['./src/assets/styles/*.styl','./src/assets/styles/modules/*.styl'],['stylus'])
 })
 
 //criando servidor local

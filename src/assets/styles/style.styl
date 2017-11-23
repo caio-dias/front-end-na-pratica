@@ -1,38 +1,7 @@
-/*Colors*/
-main-color = #ff0066;
-secondary-color = #212121;
-bg-color = #333333;
-
-/*Box model*/
-* {
-	box-sizing: border-box;
-}
-
-body {
-	display: flex;
-	flex-direction: column;
-	background-color: bg-color;
-	font-weight: 300;
-}
-
-.main {
-	flex: 1;
-}
-
-.container-center {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.container {
-	display: flex;
-	width: 100%;
-	margin: 0 auto;	
-	max-width: 800px;
-	flex-wrap: wrap;
-}	
-
-@import 'partials/header.styl';
-@import 'partials/footer.styl';
-@import 'partials/index.styl';
+@import 'modules/vars.styl';
+@import 'modules/texts.styl';
+@import 'modules/global.styl';
+@import 'modules/header.styl';
+@import 'modules/footer.styl';
+@import 'modules/index.styl';
+@import 'modules/projects.styl';

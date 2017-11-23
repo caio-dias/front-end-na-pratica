@@ -1,5 +1,18 @@
-/*Colors*/
-/*Box model*/
+.heading-lv1 {
+  margin: 20px 0;
+  font-family: 'Lobster', cursive;
+  font-size: 40px;
+  line-height: 45px;
+  color: #fff;
+}
+.paragraph {
+  display: inline-block;
+  padding: 0 5px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  color: #fff;
+}
 * {
   box-sizing: border-box;
 }
@@ -92,14 +105,4 @@ body {
 .profile-container .profile-img {
   width: 100%;
   max-width: 200px;
-}
-.heading-lv1 {
-  margin: 20px 0;
-  font-family: 'Lobster', cursive;
-  font-size: 40px;
-  line-height: 45px;
-  color: #fff;
-}
-.description {
-  color: #fff;
 }
