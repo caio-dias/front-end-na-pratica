@@ -26,6 +26,7 @@ $ gulp server
 - Html Template Engine: [Pug](https://pugjs.org/api/getting-started.html)
 - Css Prepocessor: [Stylus](http://stylus-lang.com/)
 - Local Server: [Gulp Connect](https://github.com/avevlad/gulp-connect)
+- Image Minifier [Gulp Imagemin](https://www.npmjs.com/package/gulp-imagemin)
 
 ## Tasks
 
