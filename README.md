@@ -1,7 +1,7 @@
 # Curso Front-end na Prática
 
 [![Build Status](https://travis-ci.org/caio-dias/front-end-na-pratica.svg?branch=master)](https://travis-ci.org/caio-dias/front-end-na-pratica)
-
+[![devDependencies Status](https://david-dm.org/caio-dias/front-end-na-pratica/dev-status.svg)](https://david-dm.org/caio-dias/front-end-na-pratica?type=dev)
 ## Run the project locally
 
 **1 -** Prepare the environment:
