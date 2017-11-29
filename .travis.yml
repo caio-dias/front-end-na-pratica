@@ -8,3 +8,5 @@ before_script:
 script:
 - gulp lint
 - gulp stylint
+notifications:
+  email: false
