@@ -1,0 +1,10 @@
+#arquivo de configuração da integração contínua.
+#https://travis-ci.org/caio-dias/front-end-na-pratica
+language: node_js
+node_js: stable
+sudo: required
+before_script:
+- npm install -g gulp-cli
+script:
+- gulp lint
+- gulp stylint

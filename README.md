@@ -1,5 +1,7 @@
 # Curso Front-end na Prática
 
+[![Build Status](https://travis-ci.org/caio-dias/front-end-na-pratica.svg?branch=master)](https://travis-ci.org/caio-dias/front-end-na-pratica)
+
 ## Run the project locally
 
 **1 -** Prepare the environment:
@@ -24,9 +26,12 @@ $ gulp server
 ## Stack
 - Task Runner: [Gulp](http://gulpjs.com/)
 - Html Template Engine: [Pug](https://pugjs.org/api/getting-started.html)
-- Css Prepocessor: [Stylus](http://stylus-lang.com/)
+- Css Prepocessor: [Stylus](http://stylus-lang.com)
 - Local Server: [Gulp Connect](https://github.com/avevlad/gulp-connect)
 - Image Minifier [Gulp Imagemin](https://www.npmjs.com/package/gulp-imagemin)
+- JS Transpiler [Babel](https://www.babeljs.io) 
+- JS Linter [ESLint](https://github.com/adametry/gulp-eslint)
+- CSS Linter [Stylint](https://github.com/danielhusar/gulp-stylint)
 
 ## Tasks
 
