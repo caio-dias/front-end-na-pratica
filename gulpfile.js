@@ -1,10 +1,10 @@
-var gulp = require('gulp');
-var pug = require('gulp-pug');
-var stylus = require('gulp-stylus');
-var connect = require('gulp-connect');
-var imagemin = require('gulp-imagemin');
+const gulp = require('gulp');
+const pug = require('gulp-pug');
+const stylus = require('gulp-stylus');
+const connect = require('gulp-connect');
+const imagemin = require('gulp-imagemin');
 
-gulp.task('pug', function() {
+gulp.task('pug', () => {
 	gulp.src('./src/*.pug')
 		.pipe(pug())
 		.pipe(gulp.dest('./out'))
@@ -12,7 +12,7 @@ gulp.task('pug', function() {
 		.pipe(connect.reload())
 })
 
-gulp.task('stylus', function() {
+gulp.task('stylus', () => {
 	gulp.src('./src/assets/styles/*.styl')
 		.pipe(stylus())
 		.pipe(gulp.dest('./out/assets/styles'))
@@ -20,7 +20,7 @@ gulp.task('stylus', function() {
 		.pipe(connect.reload())
 })
 
-gulp.task('watch', function() {
+gulp.task('watch', () => {
 	//1 param array com arquivo a serem escutado
 	//2 param array com tarefa a ser executada
 	gulp.watch(['./src/*.pug','./src/partials/*.pug','./src/layouts/*.pug'],['pug'])
@@ -28,7 +28,7 @@ gulp.task('watch', function() {
 })
 
 //criando servidor local
-gulp.task('serve', function() {
+gulp.task('serve', () => {
 	connect.server({
 		//indica o caminho que sera disponivel para o servidor
 		root: './out',
@@ -38,7 +38,7 @@ gulp.task('serve', function() {
 })
 
 //usando imagemin para otimizar imagens
-gulp.task('imagemin', function() {
+gulp.task('imagemin', () => {
     gulp.src('src/assets/img/*')
         .pipe(imagemin())
         .pipe(gulp.dest('out/assets/img/'))
