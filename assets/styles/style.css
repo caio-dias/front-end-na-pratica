@@ -26,10 +26,14 @@ body {
 .main {
   flex: 1;
 }
+.flipped {
+  height: 100%;
+}
 .container-center {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 .container {
   display: flex;
