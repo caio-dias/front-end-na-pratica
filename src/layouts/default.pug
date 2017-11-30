@@ -33,13 +33,16 @@ html(lang="en")
 
 		//- Fonts
 		link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|RobotoRoboto:300,400")
-	body
+	body(data-senna)
 		include ./../partials/header.pug
-
-		//- Bloco principal de código que entrará nesse layout, que é o layout padrão do projeto
-		block content
+		
+		main(data-senna-surface)#content.main
+			//- Bloco principal de código que entrará nesse layout, que é o layout padrão do projeto
+			block content
 
 		include ./../partials/footer.pug
 
 		//- Scripts
 		script(type="text/javascript" src="assets/scripts/script.js" async)
+		script(type="text/javascript" src="https://cdn.jsdelivr.net/senna.js/2.1.5/senna-min.js")
+

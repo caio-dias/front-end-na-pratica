@@ -27,8 +27,6 @@ $ gulp server
 - Task Runner: [Gulp](http://gulpjs.com/)
 - Html Template Engine: [Pug](https://pugjs.org/api/getting-started.html)
 - Css Prepocessor: [Stylus](http://stylus-lang.com)
-- Local Server: [Gulp Connect](https://github.com/avevlad/gulp-connect)
-- Image Minifier [Gulp Imagemin](https://www.npmjs.com/package/gulp-imagemin)
 - JS Transpiler [Babel](https://www.babeljs.io) 
 - JS Linter [ESLint](https://github.com/adametry/gulp-eslint)
 - CSS Linter [Stylint](https://github.com/danielhusar/gulp-stylint)
@@ -37,3 +35,4 @@ $ gulp server
 
 - `$ gulp build`: Compile, contact and minify all files/images.
 - `$ gulp server`: Watch the files to build and start a static server.
+- `$ gulp deploy`: Deploy for GH Pages.

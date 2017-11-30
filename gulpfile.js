@@ -1,3 +1,4 @@
+//importando depedencias
 const gulp = require('gulp');
 const pug = require('gulp-pug');
 const stylus = require('gulp-stylus');
@@ -6,12 +7,13 @@ const imagemin = require('gulp-imagemin');
 const babel = require('gulp-babel');
 const lint = require('gulp-eslint');
 const stylint = require('gulp-stylint');
+const ghPages = require('gulp-gh-pages');
 
 gulp.task('pug', () => {
 	gulp.src('./src/*.pug')
 		.pipe(pug())
 		.pipe(gulp.dest('./out'))
-		//quando tiver auteracoes em arquivos pug, dará reload no servidor
+		//quando houver alteracoes em arquivos pug, dará reload no servidor
 		.pipe(connect.reload())
 })
 
@@ -76,6 +78,16 @@ gulp.task('imagemin', () => {
         .pipe(gulp.dest('out/assets/img/'))
 })
 
+//deploy automatizado, utilizando a gh pages do github
+gulp.task('ghpages', () => {
+  gulp.src('./out/**/*')
+    .pipe(ghPages());
+})
+
 //tasks encadeadas
+//gera todos arquivos, html+css+js+imagemin
 gulp.task('build', ['pug','stylint','stylus','imagemin','lint','babel'])
+//liga o servidor local, e escuta os arquivos
 gulp.task('server', ['serve', 'watch'])
+//atualiza todos os arquivos, e faz o deploy
+gulp.task('deploy', ['build','ghpages'])
