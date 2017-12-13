@@ -8,6 +8,14 @@ const babel = require('gulp-babel');
 const lint = require('gulp-eslint');
 const stylint = require('gulp-stylint');
 const ghPages = require('gulp-gh-pages');
+const notifier = require('node-notifier');
+
+notifier_task = (task_name) => {
+	return notifier.notify({
+		'title': 'Build',
+		'message': `Task ${task_name} completa!`
+	  });
+}
 
 gulp.task('pug', () => {
 	gulp.src('./src/*.pug')
@@ -15,6 +23,7 @@ gulp.task('pug', () => {
 		.pipe(gulp.dest('./out'))
 		//quando houver alteracoes em arquivos pug, dará reload no servidor
 		.pipe(connect.reload())
+		notifier_task('Pug')
 })
 
 gulp.task('stylus', () => {
@@ -23,6 +32,7 @@ gulp.task('stylus', () => {
 		.pipe(gulp.dest('./out/assets/styles'))
 		//quando tiver alteracoes em arquivos stylus, dará reload no servidor
 		.pipe(connect.reload())
+		notifier_task('Stylus')		
 })
 
 gulp.task('stylint', () => {
@@ -86,7 +96,9 @@ gulp.task('ghpages', () => {
 
 //tasks encadeadas
 //gera todos arquivos, html+css+js+imagemin
-gulp.task('build', ['pug','stylint','stylus','imagemin','lint','babel'])
+gulp.task('build', ['pug','stylint','stylus','imagemin','lint','babel'], () => {
+	notifier_task('Build');
+})
 //liga o servidor local, e escuta os arquivos
 gulp.task('server', ['serve', 'watch'])
 //atualiza todos os arquivos, e faz o deploy
