@@ -75,6 +75,7 @@ gulp.task('watch', () => {
 gulp.task('serve', () => {
 	connect.server({
 		//indica o caminho que sera disponivel para o servidor
+		port: 8888,
 		root: './out',
 		//seta reload automatico
 		livereload: true
